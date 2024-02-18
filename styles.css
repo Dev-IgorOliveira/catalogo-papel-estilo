@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+:root {
+  font-family: "Oxygen", sans-serif;
+  --color-grey: #d0d0d0;
+  --color-wine: #7c4444;
+  --color-gold: #b4946c;
+  --color-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-wine);
+  padding: 10px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-gold);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--color-gold);
+  transition: background-color 0.3s;
+}
+
+.menu ul li:hover > a {
+  background-color: var(--color-gold);
+  color: var(--color-wine);
+  border-radius: 5px;
+}
+
+.submenu ul {
+  display: none;
+  position: absolute;
+  background-color: var(--color-wine);
+  padding: 0;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.submenu:hover ul {
+  display: block;
+}
+
+.submenu ul li {
+  display: block;
+}
+
+.submenu ul li a {
+  padding: 10px 20px;
+}
+
+.submenu ul li a:hover {
+  padding: 10px 20px;
+  background-color: var(--color-gold);
+  color: var(--color-wine);
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-wine);
+    display: none;
+  }
+  .menu ul.open {
+    display: flex;
+  }
+  .menu ul li {
+    width: 100%;
+    border-bottom: 1px solid var(--color-gold);
+  }
+  .submenu ul {
+    background-color: var(--color-wine);
+    position: static;
+  }
+  .submenu ul li a {
+    padding-left: 40px;
+  }
+}
