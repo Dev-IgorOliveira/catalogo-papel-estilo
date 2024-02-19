@@ -23,6 +23,7 @@ body {
   justify-content: center;
   background-color: var(--color-wine);
   padding: 10px;
+  z-index: 999;
 }
 
 .logo {
@@ -75,6 +76,7 @@ body {
   padding: 0;
   border-radius: 5px;
   white-space: nowrap;
+  z-index: 998;
 }
 
 .submenu:hover ul {
@@ -124,14 +126,10 @@ body {
   }
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .gallery-container {
   padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .photo-grid {
