@@ -49,12 +49,11 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-// Fontes
-function atualizarTexto() {
-  var texto = document.getElementById("texto-input").value;
-  var fontItems = document.querySelectorAll(".font-item");
-
-  fontItems.forEach(function (item) {
-    item.querySelector(".font-example").textContent = texto;
+// Função para as Fontes
+function applyUserText() {
+  var userText = document.getElementById("user-text").value;
+  var fontExamples = document.querySelectorAll(".font-example");
+  fontExamples.forEach(function (example) {
+    example.textContent = userText;
   });
 }

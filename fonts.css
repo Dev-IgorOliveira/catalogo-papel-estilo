@@ -158,7 +158,6 @@ body {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .modal {
@@ -195,4 +194,36 @@ body {
   }
 }
 
-/* CSS Fontes.html */
+/* Fonts */
+
+.font-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.font-example {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  font-size: 32px;
+}
+
+.input-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.input-container input {
+  padding: 5px;
+}
+
+.input-container button {
+  padding: 5px 10px;
+  background-color: var(--color-wine);
+  color: var(--color-gold);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
