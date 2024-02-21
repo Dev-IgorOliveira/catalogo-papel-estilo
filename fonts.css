@@ -100,15 +100,17 @@ body {
 @media screen and (max-width: 986px) {
   .menu-toggle {
     display: block;
+    z-index: 998;
   }
   .menu ul {
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 120px;
     left: 0;
     width: 100%;
     background-color: var(--color-wine);
     display: none;
+    z-index: 998;
   }
   .menu ul.open {
     display: flex;
@@ -127,7 +129,7 @@ body {
 }
 
 .gallery-container {
-  padding: 20px;
+  padding: 60px;
   position: relative;
   z-index: 1;
 }
@@ -158,6 +160,7 @@ body {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .modal {
