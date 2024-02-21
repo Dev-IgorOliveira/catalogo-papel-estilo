@@ -97,7 +97,7 @@ body {
   color: var(--color-wine);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 986px) {
   .menu-toggle {
     display: block;
   }
@@ -162,7 +162,7 @@ body {
 
 .modal {
   display: none;
-  position: fixed;
+  position: absolute;
   z-index: 999;
   left: 0;
   top: 0;
@@ -192,4 +192,24 @@ body {
   .photo-grid {
     grid-template-columns: repeat(5, 1fr);
   }
+}
+
+/* CSS Fontes.html */
+.input-container {
+  margin-bottom: 20px;
+}
+
+.font-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.font-item {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.font-example {
+  font-size: 18px;
 }

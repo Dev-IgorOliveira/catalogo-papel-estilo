@@ -48,3 +48,13 @@ function closeModal() {
   var modal = document.getElementById("modal");
   modal.style.display = "none";
 }
+
+// Fontes
+function atualizarTexto() {
+  var texto = document.getElementById("texto-input").value;
+  var fontItems = document.querySelectorAll(".font-item");
+
+  fontItems.forEach(function (item) {
+    item.querySelector(".font-example").textContent = texto;
+  });
+}

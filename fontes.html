@@ -11,6 +11,7 @@
       <a href="https://lojadeconvite.com.br/" target="_blank">
         <img src="./img/logo-papel&estilo.png" alt="Logo" class="logo" />
       </a>
+
       <button class="menu-toggle">&#9776; Menu</button>
       <nav class="menu">
         <ul>
@@ -60,82 +61,24 @@
       </nav>
     </div>
 
-    <div class="gallery-container">
-      <div class="photo-grid">
-        <!-- Adicione suas fotos aqui -->
-        <div class="photo">
-          <img
-            src="./img/colorplus/cp-aruba.jpg"
-            alt="Color Plus Aruba"
-            class="photo-img"
-          />
-          <button class="expand-btn" onclick="expandPhoto(this)">
-            Color Plus Aruba
-          </button>
+    <section>
+      <div class="content">
+        <h1>Catálogo de Fontes</h1>
+        <div class="input-container">
+          <label for="texto-input">Digite o Nome dos Noivos:</label>
+          <input type="text" id="texto-input" oninput="atualizarTexto()" />
         </div>
-
-        <div class="photo">
-          <img
-            src="./img/colorplus/cp-bahamas.jpg"
-            alt="Color Plus Bahamas"
-            class="photo-img"
-          />
-          <button class="expand-btn" onclick="expandPhoto(this)">
-            Visualizar
-          </button>
+        <div class="font-list">
+          <div class="font-item" style="font-family: Arial">
+            <p class="font-example">Papel & Estilo</p>
+          </div>
+          <div class="font-item" style="font-family: Helvetica">
+            <p class="font-example">Papel & Estilo</p>
+          </div>
+          <!-- Adicione mais fontes aqui -->
         </div>
-
-        <div class="photo">
-          <img
-            src="./img/colorplus/cp-brasil.jpg"
-            alt="Color Plus Brasil"
-            class="photo-img"
-          />
-          <button class="expand-btn" onclick="expandPhoto(this)">
-            Visualizar
-          </button>
-        </div>
-
-        <div class="photo">
-          <img
-            src="./img/colorplus/cp-buenos-aires.jpg"
-            alt="Color Plus Buenos Aires"
-            class="photo-img"
-          />
-          <button class="expand-btn" onclick="expandPhoto(this)">
-            Visualizar
-          </button>
-        </div>
-
-        <div class="photo">
-          <img
-            src="./img/colorplus/cp-cancun.jpg"
-            alt="Color Plus Cancun"
-            class="photo-img"
-          />
-          <button class="expand-btn" onclick="expandPhoto(this)">
-            Visualizar
-          </button>
-        </div>
-
-        <div class="photo">
-          <img
-            src="./img/colorplus/cp-cartagena.jpg"
-            alt="Color Plus Cartagena"
-            class="photo-img"
-          />
-          <button class="expand-btn" onclick="expandPhoto(this)">
-            Visualizar
-          </button>
-        </div>
-
-        <!-- Repita isso para cada foto -->
       </div>
-    </div>
-    <div id="modal" class="modal">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <img src="" alt="" id="modal-img" class="modal-img" />
-    </div>
+    </section>
 
     <script src="script.js"></script>
   </body>
