@@ -50,10 +50,29 @@ function closeModal() {
 }
 
 // Função para as Fontes
+// function applyUserText() {
+//   var userText = document.getElementById("user-text").value;
+//   var fontExamples = document.querySelectorAll(".font-example");
+//   fontExamples.forEach(function (example) {
+//     example.textContent = userText;
+//   });
+// }
+
 function applyUserText() {
+  // Obtém o texto digitado pelo usuário no input
   var userText = document.getElementById("user-text").value;
-  var fontExamples = document.querySelectorAll(".font-example");
-  fontExamples.forEach(function (example) {
-    example.textContent = userText;
+
+  // Obtém todos os elementos com o ID "static-text"
+  var staticTexts = document.querySelectorAll("#static-text");
+
+  // Altera o texto de cada elemento "static-text" para o texto digitado pelo usuário
+  staticTexts.forEach(function (staticText) {
+    staticText.textContent = userText;
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona o campo de entrada pelo ID
+  var userInput = document.getElementById("user-text");
+  // Limpa o valor do campo de entrada
+  userInput.value = "";
+});

@@ -126,6 +126,9 @@ body {
   .submenu ul li a {
     padding-left: 40px;
   }
+  .font-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .gallery-container {
@@ -200,17 +203,30 @@ body {
 /* Fonts */
 
 .font-container {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 20px; /* Adicionando espaço interno */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
   justify-content: center;
   align-items: center;
 }
 
 .font-example {
-  margin: 10px;
+  flex: 1;
   padding: 20px;
-  border: 1px solid #ccc;
-  font-size: 32px;
+  /* border: 1px solid var(--color-wine); */
+  /* font-size: 4vw;  Utilizando unidade vw para tamanho de fonte responsivo */
+  text-align: center; /* Centralizando o texto */
+  border-radius: 5px;
+}
+
+.sub-text {
+  flex: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vw;
+  text-align: center;
+  color: var(--color-wine);
+  margin-top: -25px;
 }
 
 .input-container {
@@ -229,4 +245,26 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.font-name {
+  flex: 1;
+  padding: 3px;
+  display: flex;
+  justify-content: center; /* Centralizando o texto */
+  border-bottom: 1px solid var(--color-wine);
+  font-size: 1.2vw;
+}
+
+.font-content {
+  /* height: 200px; */
+  overflow: hidden;
+  border: 1px solid var(--color-wine);
+  border-radius: 5px;
+}
+
+#static-text {
+  flex: 1;
+  font-size: 4vw;
+  white-space: nowrap;
 }
