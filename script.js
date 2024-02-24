@@ -20,7 +20,7 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-// Função para expandir a foto
+// // Função para expandir a foto
 function expandPhoto(button) {
   var modal = document.getElementById("modal");
   var modalImg = document.getElementById("modal-img");
@@ -28,7 +28,7 @@ function expandPhoto(button) {
   modalImg.src = photo.src;
   modal.style.display = "block";
 
-  // Adicionando event listener para fechar o modal ao pressionar a tecla ESC
+  //   // Adicionando event listener para fechar o modal ao pressionar a tecla ESC
   window.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       closeModal();
@@ -48,15 +48,6 @@ function closeModal() {
   var modal = document.getElementById("modal");
   modal.style.display = "none";
 }
-
-// Função para as Fontes
-// function applyUserText() {
-//   var userText = document.getElementById("user-text").value;
-//   var fontExamples = document.querySelectorAll(".font-example");
-//   fontExamples.forEach(function (example) {
-//     example.textContent = userText;
-//   });
-// }
 
 function applyUserText() {
   // Obtém o texto digitado pelo usuário no input

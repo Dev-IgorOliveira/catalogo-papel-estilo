@@ -141,6 +141,92 @@ body {
 }
 
 .photo {
+  position: relative; /* Para que o botão de expansão fique posicionado corretamente */
+  width: 100%; /* Para garantir que a largura da foto se ajuste ao contêiner */
+  height: 200px; /* Altura fixa para todas as fotos */
+  overflow: hidden; /* Para esconder partes da imagem que possam ultrapassar o contêiner */
+  border-radius: 5px;
+}
+
+.photo-img {
+  width: 100%; /* Para garantir que a imagem se ajuste à largura do contêiner */
+  height: 100%; /* Para garantir que a imagem se ajuste à altura do contêiner */
+  object-fit: cover; /* Para ajustar a imagem ao contêiner sem distorção, cortando o excesso */
+}
+
+.expand-btn {
+  position: absolute; /* Para posicionar o botão de expansão sobre a foto */
+  bottom: 10px; /* Distância do botão à parte inferior */
+  left: 50%; /* Posiciona o botão no centro horizontal */
+  transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  opacity: 0; /* Inicialmente oculta o botão */
+  transition: opacity 0.3s; /* Adiciona uma transição suave */
+}
+
+.photo:hover .expand-btn {
+  opacity: 1; /* Mostra o botão quando o mouse está sobre a foto */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal-img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* CSS de fonts */
+
+.gallery-container {
+  padding: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.photo {
   position: relative;
 }
 
@@ -197,4 +283,163 @@ body {
   }
 }
 
-/* CSS Fontes.html */
+/* Fonts */
+
+.font-container {
+  padding: 20px; /* Adicionando espaço interno */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.font-example {
+  flex: 1;
+  padding: 20px;
+  /* border: 1px solid var(--color-wine); */
+  /* font-size: 4vw;  Utilizando unidade vw para tamanho de fonte responsivo */
+  text-align: center; /* Centralizando o texto */
+  border-radius: 5px;
+}
+
+.sub-text {
+  flex: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vw;
+  text-align: center;
+  color: var(--color-wine);
+  margin-top: -25px;
+}
+
+.input-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.input-container input {
+  padding: 5px;
+}
+
+.input-container button {
+  padding: 5px 10px;
+  background-color: var(--color-wine);
+  color: var(--color-gold);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.font-name {
+  flex: 1;
+  padding: 3px;
+  display: flex;
+  justify-content: center; /* Centralizando o texto */
+  border-bottom: 1px solid var(--color-wine);
+  font-size: 1.2vw;
+}
+
+.font-content {
+  /* height: 200px; */
+  overflow: hidden;
+  border: 1px solid var(--color-wine);
+  border-radius: 5px;
+}
+
+#static-text {
+  flex: 1;
+  font-size: 4vw;
+  white-space: nowrap;
+}
+
+/* CSS do footer */
+.footer {
+  background-color: var(--color-wine);
+  color: var(--color-gold);
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  color: var(--color-gold);
+  text-decoration: none;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: var(--color-gold);
+}
+
+.footer-contact p {
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.social-icons a {
+  color: var(--color-gold);
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons {
+  color: var(--color-white);
+}
+
+.developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh;
+  margin: 0; */
+}
+
+.developer i {
+  color: red;
+}
+
+.description {
+  margin-top: 30px;
+  margin-right: 60px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.description h3 {
+  font-size: 2vw;
+  text-align: right;
+  padding-right: 10px;
+  border-right: 1px solid var(--color-wine);
+}
+
+.description p {
+  column-count: 1;
+  font-size: 1.2vw;
+  margin-left: 10px;
+}
