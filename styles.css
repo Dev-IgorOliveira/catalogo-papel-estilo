@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "AntroVectra";
+  src: url("./fonts/antro_vectra/Antro_Vectra.woff2") format("woff2"),
+    url("./fonts/antro_vectra/Antro_Vectra.woff") format("woff");
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
 :root {
@@ -127,6 +133,7 @@ body {
     padding-left: 40px;
   }
 }
+/* Acima referece ao menu */
 
 .gallery-container {
   padding: 60px;
@@ -160,8 +167,8 @@ body {
   left: 50%; /* Posiciona o botão no centro horizontal */
   transform: translateX(-50%); /* Centraliza o botão horizontalmente */
   padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo do botão */
-  color: #fff; /* Cor do texto do botão */
+  background-color: var(--color-wine); /* Cor de fundo do botão */
+  color: var(--color-gold); /* Cor do texto do botão */
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -210,62 +217,6 @@ body {
   .photo-grid {
     grid-template-columns: repeat(5, 1fr);
   }
-}
-
-/* CSS de fonts */
-
-.gallery-container {
-  padding: 60px;
-  position: relative;
-  z-index: 1;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-}
-
-.photo {
-  position: relative;
-}
-
-.photo-img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.expand-btn {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 5px 10px;
-  background-color: var(--color-wine);
-  color: var(--color-gold);
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.modal {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: auto;
-}
-
-.modal-img {
-  display: block;
-  margin: auto;
-  max-width: 150%;
-  max-height: 150%;
 }
 
 .close-btn {
@@ -417,10 +368,6 @@ body {
   align-items: center;
   /* height: 100vh;
   margin: 0; */
-}
-
-.developer i {
-  color: red;
 }
 
 .description {

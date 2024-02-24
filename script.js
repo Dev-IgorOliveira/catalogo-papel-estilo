@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function expandPhoto(button) {
   var modal = document.getElementById("modal");
+  var modalContent = document.getElementById("modal-content");
   var modalImg = document.getElementById("modal-img");
   var photo = button.parentNode.querySelector(".photo-img");
   modalImg.src = photo.src;
-  modal.style.display = "block";
+  modal.style.display =
+    "flex"; /* Altera para "flex" para centralizar verticalmente */
 }
 
 function closeModal() {
