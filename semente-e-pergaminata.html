@@ -23,60 +23,24 @@
     <title>Catálogo Semente e Pergaminata</title>
   </head>
   <body>
-    <div class="menu-container">
-      <a href="https://lojadeconvite.com.br/" target="_blank">
-        <img src="./img/logo-papel&estilo.png" alt="Logo" class="logo" />
-      </a>
-      <button class="menu-toggle">&#9776; Menu</button>
-      <nav class="menu">
-        <ul>
-          <li><a href="./index.html">Papel & Estilo</a></li>
-          <li class="submenu">
-            <a href="#">Papéis</a>
-            <ul>
-              <li><a href="./colorplus.html">Color Plus</a></li>
-              <li><a href="./colorplusmetal.html">Color Plus Metal</a></li>
-              <li><a href="./cardplus.html">Card Plus</a></li>
-              <li><a href="./curious.html">Curious</a></li>
-              <li><a href="./fcard.html">Fcard</a></li>
-              <li><a href="./kraft.html">Kraft</a></li>
-              <li><a href="./markatto.html">Markatto</a></li>
-              <li><a href="./materica.html">Materica</a></li>
-              <li><a href="./nettuno.html">Nettuno</a></li>
-              <li><a href="./sirio.html">Sirio</a></li>
-              <li>
-                <a href="./semente-e-pergaminata.html">Semente e Pergaminata</a>
-              </li>
-              <li><a href="./verge.html">Vergê</a></li>
-              <li><a href="./vsp.html">VSP</a></li>
-            </ul>
-          </li>
-          <li class="submenu">
-            <a href="#">Tipo de Impressão</a>
-            <ul>
-              <li><a href="#">Digital Colorido</a></li>
-              <li><a href="#">Relevo Americano</a></li>
-              <li><a href="#">Relevo Seco</a></li>
-              <li><a href="#">Serigrafia Vinilica</a></li>
-              <li><a href="#">Serigrafia Epoxi</a></li>
-              <li><a href="#">Hot-Stamping</a></li>
-              <li><a href="#">HMP Metalizado</a></li>
-            </ul>
-          </li>
-          <li class="submenu">
-            <a href="#">Tipo de Acabamento</a>
-            <ul>
-              <li><a href="#">Cordão Encerado</a></li>
-              <li><a href="#">Fita de Cetim</a></li>
-              <li><a href="#">Fita de Gordurão</a></li>
-              <li><a href="#">Fita de Musseline</a></li>
-              <li><a href="#">Lacre de Cera</a></li>
-            </ul>
-          </li>
-          <li><a href="./fonts.html">Tipos de Fontes</a></li>
-        </ul>
-      </nav>
+    <!-- Init Menu  -->
+    <div id="menu-placeholder">
+      <script>
+        // Carrega o menu
+        document.addEventListener("DOMContentLoaded", function () {
+          var menuPlaceholder = document.getElementById("menu-placeholder");
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "menu.html", true);
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              menuPlaceholder.innerHTML = xhr.responseText;
+            }
+          };
+          xhr.send();
+        });
+      </script>
     </div>
+    <!-- End Menu -->
 
     <div class="gallery-container">
       <div class="photo-grid">
@@ -455,81 +419,24 @@
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-links">
-          <h3>Links</h3>
-          <ul>
-            <li>
-              <a
-                href="https://papeleestilo.com.br/convites-contato/"
-                target="_blank"
-                >Contato</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://papeleestilo.com.br/dicas-de-casamento/"
-                target="_blank"
-                >Dicas de Casamento</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://papeleestilo.com.br/lojas-de-convites/"
-                target="_blank"
-                >Loja de Convites</a
-              >
-            </li>
-            <li>
-              <a href="https://papeleestilo.com.br/quem-somos/" target="_blank"
-                >Quem Somos</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lojadeconvite.com.br/" target="_blank"
-                >Loja Online</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h3>Contato</h3>
-          <p>
-            <strong><i class="fa-solid fa-envelope"></i></strong>
-            sac@papeleestilo.com.br
-          </p>
-          <a
-            href="https://wa.me/5511998823455?text=Gostaria%20de%20or%C3%A7ar%20meus%20convites%20com%20a%20Papel%20&%20Estilo.%20Vim%20pelo%20cat%C3%A1logo%20online."
-            ><p>
-              <strong><i class="fa-brands fa-whatsapp"></i></strong> (11)
-              99882-3455
-            </p></a
-          >
-
-          <p>
-            <strong><i class="fa-solid fa-phone"></i></strong> (11) 5093-3872
-          </p>
-        </div>
-        <div class="footer-social">
-          <h3>Siga-nos</h3>
-          <div class="social-icons">
-            <a href="https://pinterest.com/papeleestilo"
-              ><i class="fab fa-pinterest"></i
-            ></a>
-            <a href="https://www.facebook.com/PapeleEstilo/"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="https://instagram.com/papeleestilo/"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div class="developer">
-        <p>Desenvolvido e Atualizado por Igor Oliveira</p>
-      </div>
-    </footer>
+    <!-- Init Footer -->
+    <div id="footer-placeholder">
+      <script>
+        // Carrega o footer
+        document.addEventListener("DOMContentLoaded", function () {
+          var footerPlaceholder = document.getElementById("footer-placeholder");
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "footer.html", true);
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              footerPlaceholder.innerHTML = xhr.responseText;
+            }
+          };
+          xhr.send();
+        });
+      </script>
+    </div>
+    <!-- End Footer -->
 
     <script src="script.js"></script>
     <script
